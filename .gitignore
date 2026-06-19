@@ -1,0 +1,14 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor directories
+.vscode/
+.idea/
+
+# Dependency directories (if a build tool is added later)
+node_modules/
+
+# Build output (if a bundler is added later)
+dist/
+build/
