@@ -25,10 +25,10 @@
   }
 
   /* ---------- Mark active nav link ---------- */
-  var currentPage = window.location.pathname.split('/').pop() || 'index.html';
+  var currentFilename = window.location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('.nav-links a').forEach(function (link) {
     var href = link.getAttribute('href');
-    if (href === currentPage || (currentPage === '' && href === 'index.html')) {
+    if (href === currentFilename || (currentFilename === '' && href === 'index.html')) {
       link.classList.add('active');
     }
   });
@@ -59,6 +59,25 @@
   if (contactForm) {
     contactForm.addEventListener('submit', function (e) {
       e.preventDefault();
+
+      /* Basic client-side validation */
+      var valid = true;
+      contactForm.querySelectorAll('[required]').forEach(function (field) {
+        field.style.borderColor = '';
+        if (!field.value.trim()) {
+          field.style.borderColor = 'var(--color-accent)';
+          valid = false;
+        }
+      });
+
+      var emailField = contactForm.querySelector('[type="email"]');
+      if (emailField && emailField.value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailField.value)) {
+        emailField.style.borderColor = 'var(--color-accent)';
+        valid = false;
+      }
+
+      if (!valid) { return; }
+
       contactForm.style.display = 'none';
       var success = document.querySelector('.form-success');
       if (success) { success.style.display = 'block'; }
