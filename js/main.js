@@ -32,11 +32,16 @@
       }
     }
 
+    function keepPlaceholderLogo() {
+      image.parentElement.classList.remove('has-image');
+    }
+
     if (image.complete) {
       showUploadedLogo();
     }
 
-    image.addEventListener('load', showUploadedLogo);
+    image.addEventListener('load', showUploadedLogo, { once: true });
+    image.addEventListener('error', keepPlaceholderLogo, { once: true });
   });
 
   /* ---------- Mark active nav link ---------- */
