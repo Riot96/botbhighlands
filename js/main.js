@@ -25,19 +25,35 @@
   }
 
   /* ---------- Uploaded logo fallback ---------- */
-  document.querySelectorAll('.logo-image').forEach(function (image) {
+  document.querySelectorAll('.logo-media').forEach(function (logoMedia) {
+    var image = logoMedia.querySelector('.logo-image');
+    var placeholder = logoMedia.querySelector('.logo-icon');
+
+    if (!image) {
+      if (placeholder) { placeholder.hidden = false; }
+      return;
+    }
+
     function showUploadedLogo() {
       if (image.naturalWidth > 0) {
-        image.parentElement.classList.add('has-image');
+        logoMedia.classList.add('has-image');
+        image.hidden = false;
+        if (placeholder) { placeholder.hidden = true; }
+      } else {
+        keepPlaceholderLogo();
       }
     }
 
     function keepPlaceholderLogo() {
-      image.parentElement.classList.remove('has-image');
+      logoMedia.classList.remove('has-image');
+      image.hidden = true;
+      if (placeholder) { placeholder.hidden = false; }
     }
 
     if (image.complete) {
       showUploadedLogo();
+    } else {
+      keepPlaceholderLogo();
     }
 
     image.addEventListener('load', showUploadedLogo, { once: true });
