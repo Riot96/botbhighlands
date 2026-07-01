@@ -15,6 +15,9 @@ will continue to appear.
 ## Gallery
 Add gallery photos to the `gallery/` subfolder.
 
+The `gallery/.htaccess` file enables Apache directory browsing for this folder so
+the gallery page can discover uploaded images automatically on deployed sites.
+
 Supported file types:
 - `.jpg`
 - `.jpeg`
