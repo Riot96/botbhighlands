@@ -649,38 +649,19 @@ section { padding: 80px 0; }
    ========================================================================= */
 .gallery-section { background: var(--color-bg); }
 
-.gallery-filter {
-  display: flex;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-  margin-bottom: 2rem;
-}
-
-.filter-btn {
-  font-family: var(--font-heading);
-  font-size: 0.85rem;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  padding: 0.4rem 1.1rem;
-  border-radius: 2rem;
-  border: 1px solid var(--color-border);
-  background: transparent;
-  color: var(--color-text-muted);
-  cursor: pointer;
-  transition: all var(--transition);
-}
-
-.filter-btn:hover,
-.filter-btn.active {
-  background: var(--color-primary);
-  border-color: var(--color-primary);
-  color: #000;
-}
-
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 1rem;
+}
+
+.gallery-status {
+  margin-bottom: 1.5rem;
+  color: var(--color-text-muted);
+}
+
+.gallery-status:empty {
+  display: none;
 }
 
 .gallery-item {
@@ -691,6 +672,10 @@ section { padding: 80px 0; }
   border: 1px solid var(--color-border);
   background: var(--color-surface);
   cursor: pointer;
+}
+
+a.gallery-item {
+  color: inherit;
 }
 
 .gallery-item img {
@@ -722,20 +707,6 @@ section { padding: 80px 0; }
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
-
-/* Placeholder gallery items */
-.gallery-placeholder {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  height: 100%;
-  color: var(--color-text-muted);
-}
-
-.gallery-placeholder .ph-icon { font-size: 2.5rem; color: var(--color-primary); }
-.gallery-placeholder .ph-label { font-size: 0.8rem; text-align: center; padding: 0 1rem; }
 
 /* =========================================================================
    CONTACT PAGE
