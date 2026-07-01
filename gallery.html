@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Gallery – Photos from Battle of the Bands, INC events including Vet Jam and Karaoke Invitational." />
+  <meta name="description" content="Gallery – Photos from Battle of the Bands, INC events and community support efforts." />
   <title>Gallery | Battle of the Bands, INC</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -56,123 +56,15 @@
   <section class="gallery-section">
     <div class="container">
 
-      <!-- Filter buttons -->
-      <div class="gallery-filter" role="group" aria-label="Filter gallery by event">
-        <button class="filter-btn active" data-filter="all">All Events</button>
-        <button class="filter-btn" data-filter="vet-jam">Vet Jam</button>
-        <button class="filter-btn" data-filter="karaoke">Karaoke Invitational</button>
-        <button class="filter-btn" data-filter="community">Community</button>
-      </div>
-
       <!-- Gallery notice -->
       <div style="background: var(--color-surface); border: 1px solid var(--color-border); border-left: 4px solid var(--color-primary); border-radius: var(--radius); padding: 1rem 1.25rem; margin-bottom: 2rem; font-size: 0.9rem; color: var(--color-text-muted);">
-        📸 <strong style="color: var(--color-text);">Photo Gallery:</strong> Add your event photos to the <code>images/gallery/</code> folder and update the gallery items below. Follow us on
+        📸 <strong style="color: var(--color-text);">Photo Gallery:</strong> Drop event photos into <code>images/gallery/</code> and this page will automatically add them to the gallery. Follow us on
         <a href="https://www.facebook.com/battleofthebandsVS/" target="_blank" rel="noopener noreferrer">Facebook</a>
         for the latest event photos and updates.
       </div>
 
-      <div class="gallery-grid" id="galleryGrid">
-
-        <!-- Vet Jam items -->
-        <div class="gallery-item" data-category="vet-jam">
-          <div class="gallery-placeholder">
-            <span class="ph-icon">🎶</span>
-            <span class="ph-label">Vet Jam Summer Fest – Opening Ceremony</span>
-          </div>
-          <div class="gallery-caption"><span>Vet Jam – Opening Ceremony</span></div>
-        </div>
-
-        <div class="gallery-item" data-category="vet-jam">
-          <div class="gallery-placeholder">
-            <span class="ph-icon">🎸</span>
-            <span class="ph-label">Vet Jam Summer Fest – Main Stage Band Performance</span>
-          </div>
-          <div class="gallery-caption"><span>Vet Jam – Main Stage</span></div>
-        </div>
-
-        <div class="gallery-item" data-category="vet-jam">
-          <div class="gallery-placeholder">
-            <span class="ph-icon">🥁</span>
-            <span class="ph-label">Vet Jam Summer Fest – Live Drumming</span>
-          </div>
-          <div class="gallery-caption"><span>Vet Jam – Live Performance</span></div>
-        </div>
-
-        <div class="gallery-item" data-category="vet-jam">
-          <div class="gallery-placeholder">
-            <span class="ph-icon">🎺</span>
-            <span class="ph-label">Vet Jam Summer Fest – Second Stage</span>
-          </div>
-          <div class="gallery-caption"><span>Vet Jam – Second Stage</span></div>
-        </div>
-
-        <div class="gallery-item" data-category="vet-jam">
-          <div class="gallery-placeholder">
-            <span class="ph-icon">🎖️</span>
-            <span class="ph-label">Vet Jam – Veteran Recognition Ceremony</span>
-          </div>
-          <div class="gallery-caption"><span>Vet Jam – Veteran Recognition</span></div>
-        </div>
-
-        <div class="gallery-item" data-category="vet-jam">
-          <div class="gallery-placeholder">
-            <span class="ph-icon">👥</span>
-            <span class="ph-label">Vet Jam Summer Fest – Crowd Enjoying the Show</span>
-          </div>
-          <div class="gallery-caption"><span>Vet Jam – The Crowd</span></div>
-        </div>
-
-        <!-- Karaoke items -->
-        <div class="gallery-item" data-category="karaoke">
-          <div class="gallery-placeholder">
-            <span class="ph-icon">🎤</span>
-            <span class="ph-label">Karaoke Invitational – Stage Performance</span>
-          </div>
-          <div class="gallery-caption"><span>Karaoke Invitational – Performance</span></div>
-        </div>
-
-        <div class="gallery-item" data-category="karaoke">
-          <div class="gallery-placeholder">
-            <span class="ph-icon">🏆</span>
-            <span class="ph-label">Karaoke Invitational – Award Ceremony</span>
-          </div>
-          <div class="gallery-caption"><span>Karaoke Invitational – Awards</span></div>
-        </div>
-
-        <div class="gallery-item" data-category="karaoke">
-          <div class="gallery-placeholder">
-            <span class="ph-icon">🎙️</span>
-            <span class="ph-label">Karaoke Invitational – Crowd Participation</span>
-          </div>
-          <div class="gallery-caption"><span>Karaoke Invitational – Crowd</span></div>
-        </div>
-
-        <!-- Community items -->
-        <div class="gallery-item" data-category="community">
-          <div class="gallery-placeholder">
-            <span class="ph-icon">🤝</span>
-            <span class="ph-label">Community Fundraiser – Check Presentation</span>
-          </div>
-          <div class="gallery-caption"><span>Community – Fundraiser</span></div>
-        </div>
-
-        <div class="gallery-item" data-category="community">
-          <div class="gallery-placeholder">
-            <span class="ph-icon">🎗️</span>
-            <span class="ph-label">Community – Veteran Appreciation Event</span>
-          </div>
-          <div class="gallery-caption"><span>Community – Veteran Appreciation</span></div>
-        </div>
-
-        <div class="gallery-item" data-category="community">
-          <div class="gallery-placeholder">
-            <span class="ph-icon">🚒</span>
-            <span class="ph-label">Community – First Responder Recognition</span>
-          </div>
-          <div class="gallery-caption"><span>Community – First Responders</span></div>
-        </div>
-
-      </div>
+      <p class="gallery-status" id="galleryStatus">Loading gallery photos…</p>
+      <div class="gallery-grid" id="galleryGrid" data-gallery-source="images/gallery/" data-github-owner="Riot96" data-github-repo="botbhighlands" data-github-path="images/gallery"></div>
 
       <!-- Facebook CTA -->
       <div style="text-align: center; margin-top: 3rem;">

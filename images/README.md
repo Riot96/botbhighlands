@@ -13,15 +13,19 @@ default guitar emoji placeholder. If the file is missing, the placeholder logo
 will continue to appear.
 
 ## Gallery
-Create a `gallery/` subfolder and add event photos:
-- `gallery/vet-jam-*.jpg` – Photos from Vet Jam Summer Fest events
-- `gallery/karaoke-*.jpg` – Photos from Karaoke Invitational events
-- `gallery/community-*.jpg` – Photos from community fundraiser events
+Add gallery photos to the `gallery/` subfolder.
+
+Supported file types:
+- `.jpg`
+- `.jpeg`
+- `.png`
+- `.webp`
+- `.gif`
+- `.avif`
 
 ## Source
 Event photos can be downloaded from the official Facebook page:
 https://www.facebook.com/battleofthebandsVS/
 
-Once you have the photos, update the `<div class="gallery-item">` entries in `gallery.html`
-to use `<img src="images/gallery/your-photo.jpg" alt="Description" />` in place of the
-placeholder markup.
+Once you have the photos, place them in `images/gallery/` and the gallery page will
+automatically load them. No changes to `gallery.html` are required.
