@@ -154,6 +154,30 @@ section { padding: 80px 0; }
   color: var(--color-text);
 }
 
+.logo-media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  flex-shrink: 0;
+}
+
+.logo-image {
+  display: none;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.logo-media.has-image .logo-image {
+  display: block;
+}
+
+.logo-media.has-image .logo-icon {
+  display: none;
+}
+
 .logo-icon {
   font-size: 2rem;
   line-height: 1;
