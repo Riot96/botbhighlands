@@ -171,6 +171,11 @@ section { padding: 80px 0; }
   width: auto;
   height: auto;
   object-fit: contain;
+  flex: 0 1 auto;
+}
+
+.logo-image[hidden] {
+  display: none !important;
 }
 
 .logo-media.has-image .logo-image {
