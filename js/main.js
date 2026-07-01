@@ -29,7 +29,10 @@
     var image = logoMedia.querySelector('.logo-image');
     var placeholder = logoMedia.querySelector('.logo-icon');
 
-    if (!image) { return; }
+    if (!image) {
+      if (placeholder) { placeholder.hidden = false; }
+      return;
+    }
 
     function showUploadedLogo() {
       if (image.naturalWidth > 0) {
@@ -47,10 +50,10 @@
       if (placeholder) { placeholder.hidden = false; }
     }
 
-    keepPlaceholderLogo();
-
     if (image.complete) {
       showUploadedLogo();
+    } else {
+      keepPlaceholderLogo();
     }
 
     image.addEventListener('load', showUploadedLogo, { once: true });
