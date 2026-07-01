@@ -24,6 +24,26 @@
     });
   }
 
+  /* ---------- Uploaded logo fallback ---------- */
+  document.querySelectorAll('.logo-image').forEach(function (image) {
+    function showUploadedLogo() {
+      if (image.naturalWidth > 0) {
+        image.parentElement.classList.add('has-image');
+      }
+    }
+
+    function keepPlaceholderLogo() {
+      image.parentElement.classList.remove('has-image');
+    }
+
+    if (image.complete) {
+      showUploadedLogo();
+    }
+
+    image.addEventListener('load', showUploadedLogo, { once: true });
+    image.addEventListener('error', keepPlaceholderLogo, { once: true });
+  });
+
   /* ---------- Mark active nav link ---------- */
   var currentFilename = window.location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('.nav-links a').forEach(function (link) {

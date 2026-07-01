@@ -5,6 +5,13 @@ Place website images in this directory.
 ## Hero Background
 - `hero-bg.jpg` – Hero banner background image (recommended: 1920×1080 or wider)
 
+## Logo
+- `logo.png` – Optional custom site logo shown in the header and footer
+
+If `images/logo.png` exists, the site will automatically use it in place of the
+default guitar emoji placeholder. If the file is missing, the placeholder logo
+will continue to appear.
+
 ## Gallery
 Create a `gallery/` subfolder and add event photos:
 - `gallery/vet-jam-*.jpg` – Photos from Vet Jam Summer Fest events
